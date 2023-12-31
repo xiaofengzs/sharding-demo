@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="187e9a92-eb4b-4f9f-8bee-13dd6ab5ee7f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/da840042-90bd-46a3-87d5-2c1491ea1eb0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da840042-90bd-46a3-87d5-2c1491ea1eb0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
@@ -58,7 +57,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ShardingDemoApplicationTests.find.executor": "Run",
-    "JUnit.ShardingDemoApplicationTests.testUserSharding.executor": "Run",
+    "JUnit.ShardingDemoApplicationTests.testBroadcast.executor": "Debug",
+    "JUnit.ShardingDemoApplicationTests.testUserSharding.executor": "Debug",
     "JUnit.ShardingDemoApplicationTests.testUserShardingFind.executor": "Run",
     "JUnit.ShardingDemoApplicationTests.test_sharding.executor": "Debug",
     "Maven.sharding-demo [clean].executor": "Run",
@@ -99,7 +99,7 @@
       <recent name="com.zxf.shardingdemo.entities" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShardingDemoApplicationTests.testUserSharding">
+  <component name="RunManager" selected="JUnit.ShardingDemoApplicationTests.testBroadcast">
     <configuration name="ShardingDemoApplicationTests.find" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sharding-demo" />
       <extension name="coverage">
@@ -111,6 +111,22 @@
       <option name="PACKAGE_NAME" value="com.zxf.shardingdemo" />
       <option name="MAIN_CLASS_NAME" value="com.zxf.shardingdemo.ShardingDemoApplicationTests" />
       <option name="METHOD_NAME" value="find" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardingDemoApplicationTests.testBroadcast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sharding-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zxf.shardingdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zxf.shardingdemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zxf.shardingdemo.ShardingDemoApplicationTests" />
+      <option name="METHOD_NAME" value="testBroadcast" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,6 +189,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShardingDemoApplicationTests.testBroadcast" />
         <item itemvalue="JUnit.ShardingDemoApplicationTests.testUserSharding" />
         <item itemvalue="JUnit.ShardingDemoApplicationTests.testUserShardingFind" />
         <item itemvalue="JUnit.ShardingDemoApplicationTests.find" />
@@ -196,7 +213,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703990840150</updated>
       <workItem from="1703990939523" duration="10763000" />
-      <workItem from="1704006973068" duration="6128000" />
+      <workItem from="1704006973068" duration="9394000" />
     </task>
     <servers />
   </component>
@@ -213,6 +230,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/shardingsphere/shardingsphere-broadcast-core/5.4.1/shardingsphere-broadcast-core-5.4.1.jar!/org/apache/shardingsphere/broadcast/yaml/config/YamlBroadcastRuleConfiguration.class</url>
+          <line>15</line>
+          <properties field="tables" class="org.apache.shardingsphere.broadcast.yaml.config.YamlBroadcastRuleConfiguration" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/shardingsphere/shardingsphere-broadcast-core/5.4.1/shardingsphere-broadcast-core-5.4.1.jar!/org/apache/shardingsphere/broadcast/yaml/config/YamlBroadcastRuleConfiguration.class</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

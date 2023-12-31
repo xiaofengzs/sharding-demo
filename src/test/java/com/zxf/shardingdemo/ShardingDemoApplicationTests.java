@@ -1,8 +1,10 @@
 package com.zxf.shardingdemo;
 
 import com.zxf.shardingdemo.entities.Course;
+import com.zxf.shardingdemo.entities.Status;
 import com.zxf.shardingdemo.entities.User;
 import com.zxf.shardingdemo.mapper.CourseRepository;
+import com.zxf.shardingdemo.mapper.StatusRepository;
 import com.zxf.shardingdemo.mapper.UserRepository;
 import lombok.val;
 import org.junit.jupiter.api.Test;
@@ -21,6 +23,9 @@ class ShardingDemoApplicationTests {
 
     @Autowired
     public UserRepository userRepository;
+
+    @Autowired
+    public StatusRepository statusRepository;
 
     @Test
     void contextLoads() {
@@ -80,5 +85,14 @@ class ShardingDemoApplicationTests {
         user.setName("zxf");
         System.out.println(userRepository.findById(948262742941237248L));
 //        userRepository.save(user);
+    }
+
+    @Test
+    void testBroadcast() {
+        Status status = new Status();
+        status.setStatus("A");
+        status.setValue("active");
+
+        statusRepository.save(status);
     }
 }

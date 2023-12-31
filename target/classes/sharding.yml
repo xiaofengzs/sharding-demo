@@ -2,19 +2,19 @@ dataSources:
   m0:
     dataSourceClassName: com.zaxxer.hikari.HikariDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    jdbcUrl: jdbc:mysql://localhost:3306/course_db_0?serverTimezone=GMT%2B8
+    jdbcUrl: jdbc:mysql://localhost:3306/course_db_0?serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
     username: root
     password: 123456
   m1:
     dataSourceClassName: com.zaxxer.hikari.HikariDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    jdbcUrl: jdbc:mysql://localhost:3306/course_db_1?serverTimezone=GMT%2B8
+    jdbcUrl: jdbc:mysql://localhost:3306/course_db_1?serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
     username: root
     password: 123456
   m2:
     dataSourceClassName: com.zaxxer.hikari.HikariDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    jdbcUrl: jdbc:mysql://localhost:3306/user_db?serverTimezone=GMT%2B8
+    jdbcUrl: jdbc:mysql://localhost:3306/user_db?serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
     username: root
     password: 123456
 
@@ -24,6 +24,10 @@ mode:
     type: JDBC
 
 rules:
+- !BROADCAST
+   tables:
+     - status
+
 - !SHARDING
   tables:
     course:
@@ -64,6 +68,7 @@ rules:
   keyGenerators:
     snowflake:
       type: SNOWFLAKE
+
 props:
   proxy-hint-enabled: true
   sql-show: true

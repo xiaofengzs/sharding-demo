@@ -1,0 +1,51 @@
+dataSources:
+  m0:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/course_db_0?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+  m1:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/course_db_1?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+mode:
+  type: Standalone
+  repository:
+    type: JDBC
+
+rules:
+- !SHARDING
+  tables:
+    course:
+      actualDataNodes: m$->{0..1}.course_$->{0..1}  # 指定数据库分布情况以及表的分布情况
+      keyGenerateStrategy:
+        column: cid
+        keyGeneratorName: snowflake
+      tableStrategy:
+        standard:
+          shardingColumn: cid  # Use 'order_id' as the sharding key
+          shardingAlgorithmName: course_inline # 指定使用那个分片算法
+      databaseStrategy:
+        standard:
+          shardingColumn: user_id  # Use 'order_id' as the sharding key
+          shardingAlgorithmName: course_database_inline # 指定使用那个分片算法
+  shardingAlgorithms:
+    course_inline:
+      type: INLINE
+      props:
+        algorithm-expression: course_$->{cid % 2} # 分片算法，根据id取模决定数据分配到那个表
+    course_database_inline:
+      type: INLINE
+      props:
+        algorithm-expression: m$->{user_id % 2} # 分片算法，根据id取模决定数据分配到那个库
+  keyGenerators:
+    snowflake:
+      type: SNOWFLAKE
+props:
+  proxy-hint-enabled: true
+  sql-show: true
+#  binding-tables: course

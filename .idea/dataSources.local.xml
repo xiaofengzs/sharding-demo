@@ -16,6 +16,7 @@
             <name qname="@" />
             <name qname="course_db_0" />
             <name qname="course_db_1" />
+            <name qname="user_db" />
           </node>
         </introspection-scope>
       </schema-mapping>

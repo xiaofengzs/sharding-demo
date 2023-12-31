@@ -11,6 +11,12 @@ dataSources:
     jdbcUrl: jdbc:mysql://localhost:3306/course_db_1?serverTimezone=GMT%2B8
     username: root
     password: 123456
+  m2:
+    dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/user_db?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
 
 mode:
   type: Standalone
@@ -33,6 +39,15 @@ rules:
         standard:
           shardingColumn: user_id  # Use 'order_id' as the sharding key
           shardingAlgorithmName: course_database_inline # 指定使用那个分片算法
+    user:
+      actualDataNodes: m$->{2}.user
+      keyGenerateStrategy:
+        column: id
+        keyGeneratorName: snowflake
+#      tableStrategy:
+#        standard:
+#          shardingColumn: id
+#          shardingAlgorithmName: user_inline # 指定使用那个分片算法
   shardingAlgorithms:
     course_inline:
       type: INLINE
@@ -42,6 +57,10 @@ rules:
       type: INLINE
       props:
         algorithm-expression: m$->{user_id % 2} # 分片算法，根据id取模决定数据分配到那个库
+    user_inline:
+      type: INLINE
+      props:
+        algorithm-expression: user$->{id % 1} # 分片算法，根据id取模决定数据分配到那个库
   keyGenerators:
     snowflake:
       type: SNOWFLAKE

@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="187e9a92-eb4b-4f9f-8bee-13dd6ab5ee7f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/da840042-90bd-46a3-87d5-2c1491ea1eb0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da840042-90bd-46a3-87d5-2c1491ea1eb0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sharding.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sharding.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zxf/shardingdemo/ShardingDemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zxf/shardingdemo/ShardingDemoApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sharding.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sharding.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sql/table.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +58,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ShardingDemoApplicationTests.find.executor": "Run",
+    "JUnit.ShardingDemoApplicationTests.testUserSharding.executor": "Run",
+    "JUnit.ShardingDemoApplicationTests.testUserShardingFind.executor": "Run",
     "JUnit.ShardingDemoApplicationTests.test_sharding.executor": "Debug",
     "Maven.sharding-demo [clean].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -90,8 +94,12 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zxf.shardingdemo.mapper" />
+      <recent name="com.zxf.shardingdemo.entities" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShardingDemoApplicationTests.find">
+  <component name="RunManager" selected="JUnit.ShardingDemoApplicationTests.testUserSharding">
     <configuration name="ShardingDemoApplicationTests.find" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sharding-demo" />
       <extension name="coverage">
@@ -103,6 +111,38 @@
       <option name="PACKAGE_NAME" value="com.zxf.shardingdemo" />
       <option name="MAIN_CLASS_NAME" value="com.zxf.shardingdemo.ShardingDemoApplicationTests" />
       <option name="METHOD_NAME" value="find" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardingDemoApplicationTests.testUserSharding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sharding-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zxf.shardingdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zxf.shardingdemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zxf.shardingdemo.ShardingDemoApplicationTests" />
+      <option name="METHOD_NAME" value="testUserSharding" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShardingDemoApplicationTests.testUserShardingFind" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sharding-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zxf.shardingdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zxf.shardingdemo" />
+      <option name="MAIN_CLASS_NAME" value="com.zxf.shardingdemo.ShardingDemoApplicationTests" />
+      <option name="METHOD_NAME" value="testUserShardingFind" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,6 +173,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShardingDemoApplicationTests.testUserSharding" />
+        <item itemvalue="JUnit.ShardingDemoApplicationTests.testUserShardingFind" />
         <item itemvalue="JUnit.ShardingDemoApplicationTests.find" />
         <item itemvalue="JUnit.ShardingDemoApplicationTests.test_sharding" />
       </list>
@@ -154,7 +196,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703990840150</updated>
       <workItem from="1703990939523" duration="10763000" />
-      <workItem from="1704006973068" duration="4167000" />
+      <workItem from="1704006973068" duration="6128000" />
     </task>
     <servers />
   </component>
